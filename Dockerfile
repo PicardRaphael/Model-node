@@ -1,6 +1,6 @@
 ###
 # Build with docker build -t oclock/modele-node .
-# Launch with docker run --rm -it -v $(pwd)/src:/home/nodeuser/src oclock/modele-node
+# Launch with docker run --rm -it -v $(pwd)/src:/home/nodeuser/src -p 5000:5000 oclock/modele-node
 # Visible localhost:3000 et non 5000
 ###
 
