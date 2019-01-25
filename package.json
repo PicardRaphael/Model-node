@@ -1,0 +1,33 @@
+{
+  "name": "modele-node",
+  "version": "1.0.0",
+  "description": "Modele node with TypeScript & Express & Chai/Mocha",
+  "main": "src/index.ts",
+  "engines": {
+    "node": ">=10.15.0"
+  },
+  "scripts": {
+    "start": "ts-node-dev --respawn --require tsconfig-paths/register src/index.ts",
+    "test": "mocha --require tsconfig-paths/register --require ts-node/register --watch-extensions ts --watch tests/**/*.test.ts"
+  },
+  "author": "raphpic",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chai": "*",
+    "@types/expect": "*",
+    "@types/mocha": "*",
+    "@types/node": "*",
+    "chai": "*",
+    "mocha": "*",
+    "ts-node-dev": "^1.0.0-pre.32",
+    "tsconfig-paths": "*",
+    "tslint": "*",
+    "tslint-eslint-rules": "*",
+    "tslint-eslint-rules-recommended": "*",
+    "typescript": "*"
+  },
+  "dependencies": {
+    "@types/express": "^*",
+    "express": "*"
+  }
+}
