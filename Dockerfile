@@ -19,7 +19,7 @@ USER nodeuser
 WORKDIR /home/nodeuser
 
 # Injection de ce qui est nécessaire pour installer les dépendances.
-COPY --chown=nodeuser:nodegroup package.json yarn.lock ./
+COPY --chown=nodeuser:nodegroup package.json yarn.lock tsconfig.json ./
 
 # Installation des dépendances du projet
 RUN yarn
@@ -27,7 +27,7 @@ RUN yarn
 EXPOSE 5000
 
 # Injection de notre propre code source dans l'image
-# COPY --chown=nodeuser:nodegroup . .
+COPY --chown=nodeuser:nodegroup . .
 
 ### Partie exécution (docker run ...)
 # Commande par défaut pour le projet
