@@ -27,7 +27,7 @@ RUN yarn
 EXPOSE 5000
 
 # Injection de notre propre code source dans l'image
-COPY --chown=nodeuser:nodegroup . .
+# COPY --chown=nodeuser:nodegroup . .
 
 ### Partie exécution (docker run ...)
 # Commande par défaut pour le projet
