@@ -19,7 +19,7 @@ WORKDIR /home/nodeuser
 COPY package.json yarn.lock tsconfig.json ./
 
 # Installation des dépendances du projet
-RUN yarn
+RUN echo -e "#!/bin/sh\nyarn && yarn start" > /entrypoint.sh && chmod +x /entrypoint.sh
 
 EXPOSE 5000
 
@@ -29,4 +29,4 @@ EXPOSE 5000
 ### Partie exécution (docker run ...)
 # Commande par défaut pour le projet
 # (sera lancé quand un container est créé à partir de l'image)
-CMD yarn start
+CMD "/entrypoint.sh"
